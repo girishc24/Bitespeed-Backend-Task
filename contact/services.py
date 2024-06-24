@@ -26,7 +26,7 @@ def identify_contact(email, phone_number):
             linkPrecedence='secondary'
         )
         
-        # Convert other primaries to secondary
+        
         Contact.objects.filter(
             id__in=existing_contacts.values_list('id', flat=True)[1:]
         ).update(linkedId=primary_contact, linkPrecedence='secondary')
