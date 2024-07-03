@@ -1,5 +1,6 @@
 "# Bitespeed-Backend-Task" 
-
+## Technology
+# Python, Django, Sqlite3
 
 ### HOSTED URL 
 '''
