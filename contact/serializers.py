@@ -13,3 +13,9 @@ class ContactSerializer(serializers.ModelSerializer):
         data["secondaryContactIds"] = [contact.id for contact in Contact.objects.filter(linkedId=instance.id, linkPrecedence="secondary")]
         data["primaryContactId"] = instance.id
         return data
+
+
+class ContactnewSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = '__all__'
